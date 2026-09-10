@@ -64,4 +64,5 @@ int* p2 = p1;
 printf("%d\n", val);
 ```
 - 최종적으로 변경된 val의 값인 50이 화면에 출력됩니다.
+
 ![실행결과](https://github.com/user-attachments/assets/0df26bb5-327c-46c9-a4a1-b54856d57534)
