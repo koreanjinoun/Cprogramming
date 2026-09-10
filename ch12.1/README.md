@@ -8,8 +8,10 @@
 | `*&in` | **10** | **int**    |
 | `*&db` | **3.4** | **double** |
 
-# 실습과제 3
+# 실습과제 2
+![실행결과](https://github-production-user-asset-6210df.s3.amazonaws.com/133323809/649203268-a4f5ab71-da76-4361-b53a-ba3f845dc342.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260910%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260910T050722Z&X-Amz-Expires=300&X-Amz-Signature=99044276ca163ecc99a9db0732c586d85547c5b9f5b5f3c50c1ecb410b7ea668&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng)
 
+# 실습과제 3
 ### 1. 강제 형변환이 사용된 이유
 * **데이터 타입의 불일치 해결**: 코드에서 `125`는 기본적으로 **int(정수형)** 데이터이며, 주소를 저장하는 변수 `ptr`은 **int\*(포인터형)** 데이터입니다.
 * **주소값 직접 지정**: 정수형 데이터를 포인터 변수에 직접 대입하여 특정 메모리 주소를 가리키게 만들기 위해 강제 형변환(Type Casting)을 사용했습니다.
@@ -17,9 +19,11 @@
 ### 2. 오류가 발생하여 프로그램이 중단되는 이유
 * **시스템 보호 구역 접근**: 주소값 `125`와 같은 낮은 번지의 메모리 공간은 대부분 **운영체제(OS)가 시스템 관리를 위해 사용**하거나 예약해 둔 구역입니다.
 * **불법적인 메모리 접근**: 일반 사용자 프로그램이 운영체제가 보호하는 잘못된 메모리 주소에 접근하여 값을 읽거나 쓰려고 시도(Segmentation Fault 등)했기 때문에, 시스템 보호를 위해 프로그램이 강제로 종료됩니다.
+* 
+# 실습과제4
+![실행결과](https://github-production-user-asset-6210df.s3.amazonaws.com/133323809/649203286-579dfe51-f5e6-4f15-a892-f342d326a690.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260910%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260910T050734Z&X-Amz-Expires=300&X-Amz-Signature=2dedbb33961276382c5c0b74da3436f5c75a8eee7014987168ad6613b2ebabac&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng)
 
 # 실습과제5
-
 ## 질문 : printf 에 출력되는 val 의 값은 얼마인가?
 ```
 int main(void)
