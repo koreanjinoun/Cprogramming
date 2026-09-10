@@ -10,19 +10,33 @@
 
 int main(void)
 {
-	int arr[5];
-	int* ptr = arr; 
-	for (int i = 0; i < 5; i++)
-	{
-		printf("정수 입력 : ");
-		scanf("%d", ptr);
-		*(ptr + i) += 2;
-		ptr++;
-	}
+    
+    int arr[5];
+    int* ptr = arr;
+    printf("5개의 정수를 입력하세요: ");
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d", ptr); 
+        ptr++;             
+    }
 
-	for (int i = 0; i < 5; i++)
-	{
-		printf("%d ", *(ptr + i));
-	}
-	return 0;
+    ptr = arr;
+
+    for (int i = 0; i < 5; i++)
+    {
+        *ptr += 2;         
+        ptr++;             
+    }
+
+    ptr = arr;
+
+    printf("2씩 증가된 배열 요소의 값: ");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", *ptr); 
+        ptr++;               
+    }
+    printf("\n");
+
+    return 0;
 }
