@@ -75,8 +75,16 @@ int main(void)
 ```
 
 # 실습과제4
-![실행결과]()
+### 문제 1번 결과
+<img width="552" height="122" alt="1문제" src="https://github.com/user-attachments/assets/c5776da5-6ce7-4a1e-a7f1-aef3db20c27e" />
 
 # 실습과제5
-![실행결과]()
+### 문제 2번 결과
+<img width="710" height="122" alt="2문제" src="https://github.com/user-attachments/assets/89335d47-d97d-438f-8304-299ce2f10292" />
+
+### 문제 3번 결과
+<img width="426" height="100" alt="3문제" src="https://github.com/user-attachments/assets/76f6831e-8fd0-4f59-803b-e9d0e73fbec6" />
+
+### 문제 4번 결과
+<img width="457" height="97" alt="4문제" src="https://github.com/user-attachments/assets/9f322b10-bc55-4104-b49d-7dd01498873f" />
 
