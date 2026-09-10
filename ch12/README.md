@@ -24,3 +24,5 @@
 | &db | 105 | double* |
 
 ## #실습자료4
+![실행결과](https://github-production-user-asset-6210df.s3.amazonaws.com/133323809/649202766-8986c5ba-9ee9-47e2-a51d-b30ffac6b8c7.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260910%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260910T050658Z&X-Amz-Expires=300&X-Amz-Signature=828de2cd098ca6bfeda86ee06566848c14b848ca7362e8019964d1708af87c8c&X-Amz-SignedHeaders=host&response-content-type=image%2Fpng)
+
