@@ -27,7 +27,7 @@ int main(void)
     printf("뒤집힌 배열 요소의 값: ");
   
     for (int i = 0; i < 6; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", *(arr + i));
     }
     printf("\n");
 
