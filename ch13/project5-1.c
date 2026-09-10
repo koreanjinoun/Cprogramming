@@ -13,16 +13,21 @@ int main(void)
     int arr[5];
     int* ptr = arr;
     printf("5개의 정수를 입력하세요: ");
+    
     for (int i = 0; i < 5; i++) {
         scanf("%d", ptr + i);
     }
+    
     for (int i = 0; i < 5; i++) {
         *(ptr + i) += 2;
     }
+    
     printf("2씩 증가된 배열 요소의 값: ");
+    
     for (int i = 0; i < 5; i++) {
         printf("%d ", *(ptr + i));
     }
+    
     printf("\n");
     return 0;
 }
