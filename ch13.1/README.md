@@ -25,7 +25,6 @@ int main() {
 # 실습과제 2
 <img width="517" height="315" alt="스크린샷 2026-09-17 171830" src="https://github.com/user-attachments/assets/36b5d10a-f45f-4321-8166-4da761e57d02" />
 
-
 # 실습과제 3
 ### 1. 증감연산자 a++와 ++a의 차이
 * **a++ (후위 증감)**: 연산이 포함된 전체 수식에 현재 a 값을 먼저 사용한 후, 수식이 끝나면 a의 값을 1 증가시킨다.
