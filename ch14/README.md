@@ -83,7 +83,7 @@
   <table style="text-align: center; border-collapse: collapse; border: none; display: inline-table; margin-top: 15px;">
     <thead>
       <tr>
-        <th style="padding: 8px; border: none; font-weight: bold; font-size: 11px; min-width: 180px; width: 180px; white-space: normal;">main함수 호출후<br>swap함수 호출전</th>
+        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">main함수호출후<br>swap함수호출전</th>
         <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
         <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">swap 함수<br>호출직후</th>
         <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
