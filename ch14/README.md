@@ -78,97 +78,19 @@
 <img width="370" height="116" alt="스크린샷 2026-09-22 200545" src="https://github.com/user-attachments/assets/156a9a40-1cda-4ba2-bd56-045ce4bc6a7d" />
 
 # 실습과제4
-<h3>시간 순서에 따른 메모리 변화 (주소에 의한 호출)</h3>
-<div style="width: 100%; overflow-x: auto; white-space: nowrap; padding-bottom: 15px;">
-  <table style="text-align: center; border-collapse: collapse; border: none; display: inline-table; margin-top: 15px;">
-    <thead>
-      <tr>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">main함수호출후<br>swap함수호출전</th>
-        <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">swap 함수<br>호출직후</th>
-        <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">① 실행<br>(tmp = *px;)</th>
-        <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">② 실행<br>(*px = *py;)</th>
-        <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">③ 실행<br>(*py = tmp;)</th>
-        <th style="padding: 10px; border: none; width: 40px; min-width: 40px;">&nbsp;</th>
-        <th style="padding: 10px; border: none; font-weight: bold; font-size: 13px; min-width: 180px; width: 180px; white-space: normal;">swap 함수<br>종료 후</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <!-- 1. main함수 호출후 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">a -> 100 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">b -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-          </table>
-        </td>
-        <td style="border: none; vertical-align: middle; font-size: 20px; color: #888888;">➡️</td>
-        <!-- 2. swap 함수 호출직후 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">a -> 100 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">b -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">px -> 92</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">py -> 96</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4A148C;">tmp</td></tr>
-          </table>
-        </td>
-        <td style="border: none; vertical-align: middle; font-size: 20px; color: #888888;">➡️</td>
-        <!-- 3. ① 실행 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">a -> 100 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">b -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">px -> 92</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">py -> 96</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4A148C; font-weight: bold;">tmp -> 100</td></tr>
-          </table>
-        </td>
-        <td style="border: none; vertical-align: middle; font-size: 20px; color: #888888;">➡️</td>
-        <!-- 4. ② 실행 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4CAF50; font-weight: bold;">a -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #D32F2F;">b -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">px -> 92</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">py -> 96</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4A148C;">tmp -> 100</td></tr>
-          </table>
-        </td>
-        <td style="border: none; vertical-align: middle; font-size: 20px; color: #888888;">➡️</td>
-        <!-- 5. ③ 실행 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4CAF50;">a -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4CAF50; font-weight: bold;">b -> 100 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">px -> 92</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #1976D2;">py -> 96</td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4A148C;">tmp -> 100</td></tr>
-          </table>
-        </td>
-        <td style="border: none; vertical-align: middle; font-size: 20px; color: #888888;">➡️</td>
-        <!-- 6. swap 함수 종료 후 -->
-        <td style="border: none; vertical-align: top;">
-          <table border="1" style="background-color: #FFF0E5; width: 180px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4CAF50; font-weight: bold;">a -> 200 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">92</span></td></tr>
-            <tr style="height: 35px;"><td style="padding-left: 10px; color: #4CAF50; font-weight: bold;">b -> 100 <span style="color: #1976D2; font-size: 11px; float: right; padding-right: 5px;">96</span></td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-            <tr style="height: 35px;"><td>&nbsp;</td></tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+### 세 변수의 swap 함수 호출에 따른 메모리 변화 (예시: 10, 20, 30 입력 시)
 
-<p style="font-size: 14px; font-weight: bold; margin-top: 15px;">💡 주소를 이용하면 다른 함수(swap)에서 선언된 변수(main의 a, b)의 값을 직접 변경할 수 있습니다.</p>
+| main함수 입력 직후<br>(호출 전) | 첫 번째 swap(&x, &y)<br>호출 완료 직후 | 두 번째 swap(&y, &z)<br>호출 완료 직후 | 최종 출력 결과<br>(main함수 종료) |
+| :---: | :---: | :---: | :---: |
+| **x** (&100) -> 10<br>**y** (&200) -> 20<br>**z** (&300) -> 30 | **x** (&100) -> 20<br>**y** (&200) -> 10<br>**z** (&300) -> 30 | **x** (&100) -> 20<br>**y** (&200) -> 30<br>**z** (&300) -> 10 | **x** = 20<br>**y** = 30<br>**z** = 10 |
+
+* **실행 결과 분석:** 
+  1. 첫 번째 `swap(&x, &y)`를 통해 `x`와 `y`의 값이 서로 바뀝니다. (`x=20`, `y=10`)
+  2. 두 번째 `swap(&y, &z)`를 통해 바뀐 `y`와 `z`무의 값이 바뀝니다. (`y=30`, `z=10`)
+  3. 결과적으로 입력한 값이 한 칸씩 앞쪽으로 밀리는 형태(`x` ➔ `y` ➔ `z` ➔ `x`)로 회전하게 됩니다.
+
+
+<img width="511" height="186" alt="image" src="https://github.com/user-attachments/assets/c4103260-4cf0-4ed1-85a2-0a70cc42c9be" />
 
 # 실습과제5
 ### 문제 2번 결과
