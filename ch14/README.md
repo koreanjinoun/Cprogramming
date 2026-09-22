@@ -93,11 +93,6 @@
 <img width="511" height="186" alt="image" src="https://github.com/user-attachments/assets/c4103260-4cf0-4ed1-85a2-0a70cc42c9be" />
 
 # 실습과제5
-### 문제 2번 결과
-<img width="710" height="122" alt="2문제" src="https://github.com/user-attachments/assets/89335d47-d97d-438f-8304-299ce2f10292" />
-
-### 문제 3번 결과
-<img width="426" height="100" alt="3문제" src="https://github.com/user-attachments/assets/76f6831e-8fd0-4f59-803b-e9d0e73fbec6" />
-
-### 문제 4번 결과
-<img width="457" height="97" alt="4문제" src="https://github.com/user-attachments/assets/9f322b10-bc55-4104-b49d-7dd01498873f" />
+* SquareByValue 함수는 인자로 전달된 값의 제곱을 '반환'하였으므로 원하는 결과 값이 나온다.
+* SquareByReference 함수는 변수의 주소 값을 인자로 받아서 해당 변수에 저장된 값을 변경하였으므로 원하는 결과 값이 나온다.
+<img width="432" height="122" alt="image" src="https://github.com/user-attachments/assets/a852ac7b-1e48-4ed6-82c5-72667d4426ed" />
