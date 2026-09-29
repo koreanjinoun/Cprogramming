@@ -53,5 +53,6 @@ int main(void)
 <img width="382" height="112" alt="스크린샷 2026-09-29 213714" src="https://github.com/user-attachments/assets/c0b5d4b2-177d-46a7-bea2-d33c58ee413e" />
 
 ### 도전3
+<img width="546" height="312" alt="스크린샷 2026-09-29 215001" src="https://github.com/user-attachments/assets/78545743-1b34-4acc-808f-366f0c7686b4" />
 
 
