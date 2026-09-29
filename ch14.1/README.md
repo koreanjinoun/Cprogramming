@@ -46,3 +46,8 @@ int main(void)
 * ```*rptr = 20;```에서 ```const int*``` 값은 상수 이므로 변경이 불가능하다.
 
 # 도전과제
+### 도전1
+<img width="387" height="347" alt="스크린샷 2026-09-29 212321" src="https://github.com/user-attachments/assets/ace909d4-2d56-4c6c-9ada-868294aa3acb" />
+
+### 도전2
+
