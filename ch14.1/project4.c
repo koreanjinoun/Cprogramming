@@ -7,21 +7,21 @@
 #define _CRT_SECURE_NO_WARNINGS // 보안오류방지
 #pragma warning(disable:6031)  // 리턴값관련 경고 방지
 #include <stdio.h>
-void returnmath(float, int*, float*);
+void returnmath(double, int*, double*);
 int main(void) {
 	int a;
-	float b;
-	float x;
+	double b;
+	double x;
 	printf("실수를 입력하시오 : ");
-	scanf("%f", &x);
+	scanf("%lf", &x);
 	returnmath(x, &a, &b);
 	printf("정수부 : %d\n", a);
-	printf("소수부 : %.2f\n", b);
+	printf("소수부 : %lg\n", b);
 }
 
-void returnmath(float x, int* p, float* q) {
+void returnmath(double x, int* p, double* q) {
 	int a;
-	float b;
+	double b;
 	a = (int)x; 
 	b = x - a;  
 	*p = a;    
