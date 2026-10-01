@@ -9,7 +9,7 @@
 #pragma warning(disable:6031)  // 리턴값관련 경고 방지
 #include <stdio.h>
 int main() {
-	int arr[3][3] = {{200,2,35},{-20,5,100},{-75,5,-25}}, max = 0, a = 0, b = 0;
+	int arr[3][3] = {{200,2,35},{-20,5,100},{-75,5,-25}}, max, a = 0, b = 0;
 	max = arr[0][0];
 	int* p = &arr[0][0];
 	for(int i = 1; i < 9; i++) {
