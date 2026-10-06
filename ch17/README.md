@@ -13,10 +13,10 @@
 
 
 # 실습과제 2
-
+<img width="402" height="102" alt="스크린샷 2026-10-06 223225" src="https://github.com/user-attachments/assets/625b9a03-8bf6-47b6-831d-18301cca9d6c" />
 
 # 실습과제 3
-
+<img width="400" height="165" alt="스크린샷 2026-10-06 223309" src="https://github.com/user-attachments/assets/fd70e81b-addd-4f2f-a124-0197c3922ef9" />
 
 # 실습과제4
 
