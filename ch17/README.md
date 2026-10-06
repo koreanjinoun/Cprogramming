@@ -11,36 +11,87 @@
 | *dptr | 100 | double* |
 | **dptr | 6.28 | double |
 
-### 2. 다음 코드에서 함수선언과 정의를 추가하여 결과처럼 나오도록 하시오.
-
-### 3. 다음 코드에서 함수선언과 정의를 추가하여 결과처럼 나오도록 하시오.
-* 다른 함수의 지역변수 변경 불가: 값에 의한 호출(Call by value)은 변수의 복사본을 전달하기 때문에, 호출된 함수 내부에서 매개변수를 변경하더라도 호출한 쪽(예: main 함수)의 원본 지역변수 값을 변경할 수 없습니다.
-### 4. 주소에 의한 함수 호출방식이 필요한 경우를 설명하라.
-* 외부 지역변수의 값 변경(간접 참조): swap 함수나 scanf 함수처럼 다른 함수에서 선언된 지역변수의 값을 직접 변경해야 할 때 반드시 주소에 의한 호출(Call by pointer) 방식을 사용해야 합니다. 주소를 이용하면 포인터를 통해 다른 함수의 메모리 공간에 직접 접근할 수 있기 때문입니다.
 
 # 실습과제 2
 
 
 # 실습과제 3
-<img width="370" height="116" alt="스크린샷 2026-09-22 200545" src="https://github.com/user-attachments/assets/156a9a40-1cda-4ba2-bd56-045ce4bc6a7d" />
+
 
 # 실습과제4
-### 세 변수의 swap 함수 호출에 따른 메모리 변화 (예시: 10, 20, 30 입력 시)
 
-| main함수 입력 직후<br>(호출 전) | 첫 번째 swap(&x, &y)<br>호출 완료 직후 | 두 번째 swap(&y, &z)<br>호출 완료 직후 | 최종 출력 결과<br>(main함수 종료) |
-| :---: | :---: | :---: | :---: |
-| **x** (&100) -> 10<br>**y** (&200) -> 20<br>**z** (&300) -> 30 | **x** (&100) -> 20<br>**y** (&200) -> 10<br>**z** (&300) -> 30 | **x** (&100) -> 20<br>**y** (&200) -> 30<br>**z** (&300) -> 10 | **x** = 20<br>**y** = 30<br>**z** = 10 |
+## 1. 메인 함수 (main)
 
-* **실행 결과 분석:** 
-  1. 첫 번째 `swap(&x, &y)`를 통해 `x`와 `y`의 값이 서로 바뀝니다. (`x=20`, `y=10`)
-  2. 두 번째 `swap(&y, &z)`를 통해 바뀐 `y`와 `z`무의 값이 바뀝니다. (`y=30`, `z=10`)
-  3. 결과적으로 입력한 값이 한 칸씩 앞쪽으로 밀리는 형태(`x` ➔ `y` ➔ `z` ➔ `x`)로 회전하게 됩니다.
+```c
+#include <stdio.h>
+void MaxAndMin(int* arr, int size, int** maxPtr, int** minPtr);
+```
+* **기능:** 함수 선언부.
+* **특징:** `maxPtr`과 `minPtr`을 이중 포인터(`int**`)로 지정하여 `main`의 포인터 변수 주소를 직접 전달받음.
 
+```c
+int main() {
+	int* maxPtr;
+	int* minPtr;
+	int arr;
+```
+* **`maxPtr`, `minPtr`:** 최댓값과 최솟값의 '메모리 주소'를 저장할 싱글 포인터 변수 (초기 상태는 빈 공간).
+* **`arr`:** 사용자 입력을 저장할 크기 5의 정수형 배열.
 
-<img width="511" height="186" alt="image" src="https://github.com/user-attachments/assets/c4103260-4cf0-4ed1-85a2-0a70cc42c9be" />
+```c
+	for (int i = 0; i < 5; i++) {
+		printf("정수 입력 : ");
+		scanf("%d", &arr[i]);
+	}
+```
+* **기능:** 반복문을 통한 5개의 정수 입력 및 배열 저장.
 
-# 실습과제5
-* SquareByValue 함수는 인자로 전달된 값의 제곱을 '반환'하였으므로 원하는 결과 값이 나온다.
-* SquareByReference 함수는 변수의 주소 값을 인자로 받아서 해당 변수에 저장된 값을 변경하였으므로 원하는 결과 값이 나온다.
-<img width="432" height="122" alt="image" src="https://github.com/user-attachments/assets/a852ac7b-1e48-4ed6-82c5-72667d4426ed" />
+```c
+	MaxAndMin(arr, 5, &maxPtr, &minPtr);
+```
+* **기능:** 최댓값/최솟값 탐색 함수 호출.
+* **인자 전달 원리:** 
+  * `arr`: 배열 첫 번째 요소의 주소(`int*`)를 전달.
+  * `&maxPtr`, `&minPtr`: 포인터 변수 자체의 주소를 전달 (**주소에 의한 참조, Call by Reference**).
 
+```c
+	printf("최대값: %d\n", *maxPtr);
+	printf("최소값: %d\n", *minPtr);
+	return 0;
+}
+```
+* **기능:** 탐색 종료 후 `maxPtr`과 `minPtr`이 가리키는 실제 주소의 값(`*` 역참조)을 출력.
+
+---
+
+## 2. 탐색 함수 (MaxAndMin)
+
+```c
+void MaxAndMin(int* arr, int size, int** maxPtr, int** minPtr) {
+	int* max, * min;
+	max = min = &arr;
+```
+* **매개변수:** `main`의 변수 주소를 이중 포인터(`maxPtr`, `minPtr`)로 수신.
+* **초기화:** 임시 싱글 포인터 `max`, `min`에 배열 첫 번째 방의 주소(`&arr`)를 대입하여 기준 설정.
+
+```c
+	for(int i = 1; i < size; i++) {
+		if(arr[i] > *max) {
+			max = &arr[i];
+		}
+		if(arr[i] < *min) {
+			min = &arr[i];
+		}
+	}
+```
+* **탐색 로직:** 배열의 2번째 요소(`i=1`)부터 마지막까지 순회하며 크기 비교.
+* **갱신:** 현재 요소가 기존 값보다 크거나 작으면 해당 방의 주소(`&arr[i]`)를 포인터에 대입.
+
+```c
+	*maxPtr = max;
+	*minPtr = min;
+}
+```
+* **핵심 연산 (이중 포인터 역참조):**
+  * `*maxPtr`, `*minPtr` 연산으로 `main` 함수 내부의 원본 포인터 변수에 직접 접근.
+  * 최종 탐색된 배열 내 최댓값/최솟값의 주소(`max`, `min`)를 이 원본 변수에 대입하여 함수 종료 후에도 주소를 유지시킴.
