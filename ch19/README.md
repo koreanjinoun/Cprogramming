@@ -98,3 +98,7 @@ int main() {
 <img width="660" height="755" alt="스크린샷 2026-10-08 212002" src="https://github.com/user-attachments/assets/11e647ee-7190-4a9e-9c80-64c25ff2033c" />
 
 ### 도전2
+<img width="406" height="221" alt="스크린샷 2026-10-08 221957" src="https://github.com/user-attachments/assets/5126e1dd-871e-4f0b-b9d5-9ffebc85127a" />
+
+### 도전3
+<img width="420" height="205" alt="스크린샷 2026-10-08 222825" src="https://github.com/user-attachments/assets/584f93fc-008f-4abd-bb5c-f2f8e3b95b25" />
