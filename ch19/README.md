@@ -89,3 +89,7 @@ int main() {
 `void *` 매개변수는 포인터의 종류를 가리지 않는 만능 주소 저장소이다. 그렇기 때문에 서로 완전히 다른 자료형인 정수형 변수의 주소(`&num`)와 실수형 변수의 주소(`&pi`)를 동일한 `printValue` 함수의 첫 번째 인자로 제약 없이 넘겨줄 수 있다.
 
 <img width="362" height="115" alt="스크린샷 2026-10-08 203434" src="https://github.com/user-attachments/assets/43907002-23e5-4e84-ac29-d0c114ec23ef" />
+
+# 실습과제3
+<img width="695" height="130" alt="스크린샷 2026-10-08 205048" src="https://github.com/user-attachments/assets/82d6fe7c-04ca-4e15-ae36-c5d3b33308fc" />
+
