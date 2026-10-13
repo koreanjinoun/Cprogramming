@@ -16,7 +16,7 @@
 * printf 실행시 프로그램에서 버퍼에 데이터를 전송하고 리턴, 운영체제에서 버퍼의 데이터를 입출력장치에 전송하고 버퍼를 비움.
 
 # 실습과제2
-### 1단계: 정수 입력 처리 (`scanf("%d", &x);`)
+<img width="500" height="247" alt="스크린샷 2026-10-13 190935" src="https://github.com/user-attachments/assets/207da0c6-7366-4d45-bc7d-0c9f1c8affa4" />
 
 # 실습과제 3
 * 첫 번째 입력에서 사용자가 홍길동과 엔터(개행 문자 \n)를 입력하면, 문자열 홍길동만 변수에 저장되고 엔터(\n)는 입력 버퍼에 그대로 남아있게 됩니다.
@@ -30,6 +30,7 @@
 | **초기 버퍼** |||| **`'\n'`** | `scanf("%c", &blood_type);` |
 | | | | | **`->`** | **`'\n'`** **`'blood_type'`** |
 
+<img width="457" height="162" alt="스크린샷 2026-10-13 191403" src="https://github.com/user-attachments/assets/bc5d290f-0a7f-4c0b-952c-8a69bd8e4872" />
 
 # 실습과제4
 * 첫 번째 반복에서 사용자가 abcde와 엔터(개행 문자 \n)를 입력하면, 이 문자들은 모두 입력 버퍼에 저장됩니다. 그 후 scanf("%c", &ch); 함수는 버퍼에서 문자를 하나씩 꺼내오기 때문에, 이후 4번의 반복 동안은 추가 입력 없이 버퍼에 남아있는 문자들이 차례대로 출력됩니다.
@@ -50,6 +51,6 @@
 | **남은 버퍼** | | | | | | **`'\n'`** | `scanf("%c", &ch);` |
 
 # 실습과제5
-* SquareByValue 함수는 인자로 전달된 값의 제곱을 '반환'하였으므로 원하는 결과 값이 나온다.
-* SquareByReference 함수는 변수의 주소 값을 인자로 받아서 해당 변수에 저장된 값을 변경하였으므로 원하는 결과 값이 나온다.
-<img width="432" height="122" alt="image" src="https://github.com/user-attachments/assets/a852ac7b-1e48-4ed6-82c5-72667d4426ed" />
+
+<img width="462" height="117" alt="스크린샷 2026-10-13 202734" src="https://github.com/user-attachments/assets/9bac4bd8-ab5e-4cae-b462-205753f06857" />
+
