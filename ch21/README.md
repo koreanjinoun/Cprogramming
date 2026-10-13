@@ -16,67 +16,23 @@
 * printf 실행시 프로그램에서 버퍼에 데이터를 전송하고 리턴, 운영체제에서 버퍼의 데이터를 입출력장치에 전송하고 버퍼를 비움.
 
 # 실습과제 
-<h3>시간 순서에 따른 메모리 변화</h3>
+### 1단계: 정수 입력 처리 (`scanf("%d", &x);`)
 
-<table style="text-align: center; border-collapse: collapse; border: none; margin-top: 15px;">
-  <thead>
-    <tr>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px;">main함수 호출후<br>add2함수 호출전</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px; width: 40px;">&nbsp;</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px;">add2 함수<br>호출 및 실행</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px; width: 40px;">&nbsp;</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px;">add2 함수<br>종료 후</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px; width: 40px;">&nbsp;</th>
-      <th style="padding: 10px; border: none; font-weight: bold; font-size: 14px;">main함수<br>종료 후</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <!-- 1단계: add2 호출 전 -->
-      <td style="border: none; vertical-align: top;">
-        <table border="1" style="background-color: #FFF0E5; width: 170px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-          <tr style="height: 40px;"><td style="padding-left: 10px; color: #D32F2F; font-weight: bold;">number -> N(정수)</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-        </table>
-      </td>
-      <!-- 화살표 -->
-      <td style="border: none; vertical-align: middle; font-size: 24px; color: #888888;">➡️</td>
-      <!-- 2단계: modify 실행 중 -->
-      <td style="border: none; vertical-align: top;">
-        <table border="1" style="background-color: #FFF0E5; width: 170px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-          <tr style="height: 40px;"><td style="padding-left: 10px; color: #D32F2F; font-weight: bold;">number -> N(정수)</td></tr>
-          <tr style="height: 40px;"><td style="padding-left: 10px; color: #1976D2; font-weight: bold;">value -> N(정수) -> N(정수) + 2</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-        </table>
-      </td>
-      <!-- 화살표 -->
-      <td style="border: none; vertical-align: middle; font-size: 24px; color: #888888;">➡️</td>
-      <!-- 3단계: add2 종료 후 -->
-      <td style="border: none; vertical-align: top;">
-        <table border="1" style="background-color: #FFF0E5; width: 170px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-          <tr style="height: 40px;"><td style="padding-left: 10px; color: #D32F2F; font-weight: bold;">number -> N(정수)</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-        </table>
-      </td>
-      <!-- 화살표 -->
-      <td style="border: none; vertical-align: middle; font-size: 24px; color: #888888;">➡️</td>
-      <!-- 4단계: main 종료 후 -->
-      <td style="border: none; vertical-align: top;">
-        <table border="1" style="background-color: #FFF0E5; width: 170px; border-collapse: collapse; border: 1px solid #A0A0A0; text-align: left;">
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-          <tr style="height: 40px;"><td>&nbsp;</td></tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| 구분 | [0] | [1] | [2] | [3] | 실행 코드 & 결과 |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **입력 버퍼** | `'\n'` | **`'0'`** | **`'0'`** | **`'1'`** | `scanf("%d", &x);` |
+| **변수 매핑** | | ↘ | ↓ | ↙ | **`x`** = `100` |
+
+---
+
+### 2단계: 문자 입력 처리 (`scanf("%c", &ch);`)
+
+| 구분 | [0] | [1] | [2] | [3] | 실행 코드 & 결과 |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **입력 버퍼** | | | | **`'\n'`** | `scanf("%c", &ch);` |
+| **변수 매핑** | | | | ↓ | **`ch`** = `'\n'` |
+
+
 * 값에 의한 호출방식으로 다른 함수(add2 -> main)에서 선언된 지역변수(value -> number)의 값을 변경하는 것은 불가능
 
 # 실습과제 3
