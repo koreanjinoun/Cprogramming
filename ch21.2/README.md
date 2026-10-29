@@ -13,9 +13,9 @@
 <img width="477" height="242" alt="스크린샷 2026-10-29 185141" src="https://github.com/user-attachments/assets/16829330-c7a5-4ec7-ba90-38eb6a08b420" />
 
 # 실습과제6
-## 문제 1번
+### 문제 1번
 <img width="431" height="126" alt="스크린샷 2026-10-29 201333" src="https://github.com/user-attachments/assets/cc834e57-73f9-4603-96c5-59ea4ec71d14" />
 
-## 문제 2번
+### 문제 2번
 <img width="482" height="135" alt="스크린샷 2026-10-29 203431" src="https://github.com/user-attachments/assets/fb1dc874-2162-4bed-bf92-8c0f47a7b152" />
 
