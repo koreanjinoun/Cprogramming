@@ -23,4 +23,4 @@
     scanf("%llu", &pointer);
     ```
     같은걸 활용해야 하지만 이러면 정답입력이 16진수를 10진수로 바꿨음에도 입력이 복잡해지므로 시작 주소를 1001로 설정하였습니다.
-  <img width="1066" height="613" alt="스크린샷 2026-11-05 191030" src="https://github.com/user-attachments/assets/03fd7fa7-630d-4d11-b668-ae7a4b7e5c13" />
+<img width="1066" height="613" alt="스크린샷 2026-11-05 191030" src="https://github.com/user-attachments/assets/03fd7fa7-630d-4d11-b668-ae7a4b7e5c13" />
