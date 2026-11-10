@@ -23,7 +23,7 @@ int main() {
 	get_data(a);
 	POINT b = get_best(a);
 
-	printf("최우수학생의 이름은 %s, 점수는 %d점", b.name, b.number);
+	printf("제일 앞에 나오는 이름은 %s, 점수는 %d점", b.name, b.number);
 }
 void get_data(POINT* t) {
 	POINT* list = t;
