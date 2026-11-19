@@ -25,4 +25,6 @@ int main() {
 		scanf("%s %d %f", name, &number1, &number2);
 		fprintf(str, "%s %d %g\n", name, number1, number2);
 	}
+
+	return 0;
 }
